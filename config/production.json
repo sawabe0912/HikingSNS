@@ -1,0 +1,4 @@
+{
+	"mongoURI": "mongodb+srv://rionsawabe:sasasaGK1@cpsc2600.emc8c.mongodb.net/devCommunity?retryWrites=true&w=majority",
+	"jwtSecret": "mysecrettoken"
+}
