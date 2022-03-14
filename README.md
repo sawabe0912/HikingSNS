@@ -1,6 +1,6 @@
 # HikingSNS
 Hiking Social Media to connect peers.
-This web applicatio enables users to share their own past hiking experiences, future events, and opinions or questions.
+This web application enables users to share their own past hiking experiences, future events, and opinions or questions.
 
 # Deployed website using Heroku
 https://sleepy-island-93887.herokuapp.com/
