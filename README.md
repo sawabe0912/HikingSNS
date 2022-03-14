@@ -20,3 +20,5 @@ https://github.com/sawabe0912/HikingSNS/
 2. cd client - to move to client folder
 3. npm install - to install frontend dependencies
 4. npm run dev - to run this app both for frontend and backend simultaneously
+
+# Functionalities
