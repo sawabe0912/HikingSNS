@@ -5,9 +5,6 @@ This web application enables users to share their own past hiking experiences, f
 # Deployed website using Heroku
 https://sleepy-island-93887.herokuapp.com/
 
-# Github Repository
-https://github.com/sawabe0912/HikingSNS/
-
 # Tech Stacks
 * MongoDB
 * ExpressJS
