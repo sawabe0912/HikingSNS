@@ -12,7 +12,7 @@ const ProfileItem = ({
 }) => {
 	return (
 		<div className="card">
-			<img src={avatar} alt="" className="card-img-top" />
+			<img src={avatar} alt="" className="card-img-top" width="200" height="200"/>
 			<div className="card-body">
 				<h2 className="card-title">{name}</h2>
 				<p className="card-text">{location && <span>{location}</span>}</p>
