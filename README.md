@@ -3,7 +3,7 @@ Hiking Social Media to connect peers.
 This web application enables users to share their own past hiking experiences, future events, and opinions or questions.
 
 # Deployed website using Heroku
-https://sleepy-island-93887.herokuapp.com/
+ https://lit-lowlands-14884.herokuapp.com/
 
 # Tech Stacks
 * MongoDB
