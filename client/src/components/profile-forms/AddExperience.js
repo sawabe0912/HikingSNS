@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addExperience } from "../../actions/profile";
-
 const AddExperience = ({ addExperience }) => {
 	const [formData, setFormData] = useState({
 		course: "",
@@ -13,10 +12,8 @@ const AddExperience = ({ addExperience }) => {
 	});
 	const navigate = useNavigate();
 	const { course, location, date, description } = formData;
-
 	const onChange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
-
 	return (
 		<section className="container">
 			<h1 className=" text-primary">Add your biggest challenge!</h1>
@@ -53,7 +50,6 @@ const AddExperience = ({ addExperience }) => {
 					<h4>Date</h4>
 					<input type="date" name="date" value={date} onChange={onChange} />
 				</div>
-
 				<div className="form-group">
 					<textarea
 						name="description"
@@ -72,9 +68,7 @@ const AddExperience = ({ addExperience }) => {
 		</section>
 	);
 };
-
 AddExperience.propTypes = {
 	addExperience: PropTypes.func.isRequired
 };
-
 export default connect(null, { addExperience })(AddExperience);

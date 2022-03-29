@@ -3,28 +3,22 @@ import { Link, useMatch, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
-
 const initialState = {
 	location: "",
 	status: "",
 	dream: "",
 	bio: ""
 };
-
 const ProfileForm = ({
 	profile: { profile, loading },
 	createProfile,
 	getCurrentProfile
 }) => {
 	const [formData, setFormData] = useState(initialState);
-
 	const creatingProfile = useMatch("/create-profile");
-
 	const navigate = useNavigate();
-
 	useEffect(() => {
 		if (!profile) getCurrentProfile();
-
 		if (!loading && profile) {
 			const profileData = { ...initialState };
 			for (const key in profile) {
@@ -33,24 +27,18 @@ const ProfileForm = ({
 			for (const key in profile.social) {
 				if (key in profileData) profileData[key] = profile.social[key];
 			}
-
 			if (Array.isArray(profileData.dream))
 				profileData.dream = profileData.dream.join(", ");
-
 			setFormData(profileData);
 		}
 	}, [loading, getCurrentProfile, profile]);
-
 	const { location, status, dream, bio } = formData;
-
 	const onChange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
-
 	const onSubmit = (e) => {
 		e.preventDefault();
 		createProfile(formData, navigate, profile ? true : false);
 	};
-
 	return (
 		<section className="container">
 			<h1 className="text-primary">
@@ -73,7 +61,6 @@ const ProfileForm = ({
 					</select>
 					<small className="form-text">Tell us your level</small>
 				</div>
-
 				<div className="form-group">
 					<input
 						type="text"
@@ -105,7 +92,6 @@ const ProfileForm = ({
 					/>
 					<small className="form-text">Tell us a little about yourself</small>
 				</div>
-
 				<input type="submit" className="btn btn-primary" />
 				<Link className="btn btn-light" to="/dashboard">
 					Go Back
@@ -114,17 +100,14 @@ const ProfileForm = ({
 		</section>
 	);
 };
-
 ProfileForm.propTypes = {
 	createProfile: PropTypes.func.isRequired,
 	getCurrentProfile: PropTypes.func.isRequired,
 	profile: PropTypes.object.isRequired
 };
-
 const mapStateToProps = (state) => ({
 	profile: state.profile
 });
-
 export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
 	ProfileForm
 );

@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addPost } from "../../actions/post";
-
 const PostForm = ({ addPost }) => {
 	const [text, setText] = useState("");
-
 	return (
 		<div className="post-form" style={{ width: "70%" }}>
 			<div className="bg-primary p-2">
@@ -36,9 +34,7 @@ const PostForm = ({ addPost }) => {
 		</div>
 	);
 };
-
 PostForm.propTypes = {
 	addPost: PropTypes.func.isRequired
 };
-
 export default connect(null, { addPost })(PostForm);

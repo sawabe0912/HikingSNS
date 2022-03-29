@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 import { connect } from "react-redux";
-
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 	return (
 		<nav className="navbar">
@@ -38,14 +37,11 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 		</nav>
 	);
 };
-
 Navbar.propTypes = {
 	logout: PropTypes.func.isRequired,
 	auth: PropTypes.object.isRequired
 };
-
 const mapStateToProps = (state) => ({
 	auth: state.auth
 });
-
 export default connect(mapStateToProps, { logout })(Navbar);

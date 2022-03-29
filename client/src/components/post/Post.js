@@ -7,13 +7,11 @@ import PostItem from "../posts/PostItem";
 import CommentForm from "../post/CommentForm";
 import CommentItem from "../post/CommentItem";
 import { getPost } from "../../actions/post";
-
 const Post = ({ getPost, post: { post, loading } }) => {
 	const { id } = useParams();
 	useEffect(() => {
 		getPost(id);
 	}, [getPost, id]);
-
 	return loading || post === null ? (
 		<Spinner />
 	) : (
@@ -31,14 +29,11 @@ const Post = ({ getPost, post: { post, loading } }) => {
 		</section>
 	);
 };
-
 Post.propTypes = {
 	getPost: PropTypes.func.isRequired,
 	post: PropTypes.object.isRequired
 };
-
 const mapStateToProps = (state) => ({
 	post: state.post
 });
-
 export default connect(mapStateToProps, { getPost })(Post);

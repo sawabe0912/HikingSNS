@@ -4,12 +4,10 @@ import { connect } from "react-redux";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 import { getPosts } from "../../actions/post";
-
 const Posts = ({ getPosts, post: { posts } }) => {
 	useEffect(() => {
 		getPosts();
 	}, [getPosts]);
-
 	return (
 		<section className="container">
 			<h1 className="text-primary postClass">Posts</h1>
@@ -23,14 +21,11 @@ const Posts = ({ getPosts, post: { posts } }) => {
 		</section>
 	);
 };
-
 Posts.propTypes = {
 	getPosts: PropTypes.func.isRequired,
 	post: PropTypes.object.isRequired
 };
-
 const mapStateToProps = (state) => ({
 	post: state.post
 });
-
 export default connect(mapStateToProps, { getPosts })(Posts);

@@ -16,6 +16,10 @@ a {
 	text-decoration: none;
 }
 
+.regBt {
+	margin-right: 5px;
+}
+
 ul {
 	list-style: none;
 }
@@ -137,7 +141,7 @@ ul {
 	width: 100%;
 	top: 0;
 	opacity: 1;
-	background-color: #F0F8FF;
+	background-color: #f0f8ff;
 }
 
 .navbar ul {

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addLike } from "../../actions/post";
-
 const PostItem = ({
 	addLike,
 	post: { _id, text, name, avatar, likes, comments },
@@ -37,20 +36,16 @@ const PostItem = ({
 		</div>
 	</div>
 );
-
 PostItem.defaultProps = {
 	showActions: true
 };
-
 PostItem.propTypes = {
 	post: PropTypes.object.isRequired,
 	auth: PropTypes.object.isRequired,
 	addLike: PropTypes.func.isRequired,
 	showActions: PropTypes.bool
 };
-
 const mapStateToProps = (state) => ({
 	auth: state.auth
 });
-
 export default connect(mapStateToProps, { addLike })(PostItem);

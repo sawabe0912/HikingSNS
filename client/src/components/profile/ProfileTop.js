@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 const ProfileTop = ({
 	profile: {
 		location,
@@ -15,9 +14,7 @@ const ProfileTop = ({
 		</div>
 	);
 };
-
 ProfileTop.propTypes = {
 	profile: PropTypes.object.isRequired
 };
-
 export default ProfileTop;

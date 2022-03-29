@@ -1,5 +1,4 @@
 import React from "react";
-
 const NotFound = () => {
 	return (
 		<section className="container">
@@ -8,5 +7,4 @@ const NotFound = () => {
 		</section>
 	);
 };
-
 export default NotFound;

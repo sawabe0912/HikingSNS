@@ -7,7 +7,6 @@ import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
 import ProfileExperience from "./ProfileExperience";
 import { getProfileById } from "../../actions/profile";
-
 const Profile = ({ getProfileById, profile: { profile }, auth }) => {
 	const { id } = useParams();
 	useEffect(() => {
@@ -54,16 +53,13 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
 		</section>
 	);
 };
-
 Profile.propTypes = {
 	getProfileById: PropTypes.func.isRequired,
 	profile: PropTypes.object.isRequired,
 	auth: PropTypes.object.isRequired
 };
-
 const mapStateToProps = (state) => ({
 	profile: state.profile,
 	auth: state.auth
 });
-
 export default connect(mapStateToProps, { getProfileById })(Profile);

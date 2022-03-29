@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteComment } from "../../actions/post";
-
 const CommentItem = ({
 	postId,
 	comment: { _id, text, user },
@@ -24,16 +23,13 @@ const CommentItem = ({
 		</div>
 	</div>
 );
-
 CommentItem.propTypes = {
 	postId: PropTypes.string.isRequired,
 	comment: PropTypes.object.isRequired,
 	auth: PropTypes.object.isRequired,
 	deleteComment: PropTypes.func.isRequired
 };
-
 const mapStateToProps = (state) => ({
 	auth: state.auth
 });
-
 export default connect(mapStateToProps, { deleteComment })(CommentItem);

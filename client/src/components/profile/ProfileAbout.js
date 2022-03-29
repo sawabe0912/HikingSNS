@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-
 const ProfileAbout = ({
 	profile: {
 		bio,
@@ -18,7 +17,6 @@ const ProfileAbout = ({
 					<div className="line" />
 				</Fragment>
 			)}
-
 			<div className="dream">
 				{dreams.map((dream, index) => (
 					<div key={index} className="p-1">
@@ -32,5 +30,4 @@ const ProfileAbout = ({
 ProfileAbout.propTypes = {
 	profile: PropTypes.object.isRequired
 };
-
 export default ProfileAbout;
